@@ -14,7 +14,6 @@ class UserInfoListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 200,
       child: Card(
         color: const Color(0xFFFAFAFA),
         elevation: 0,

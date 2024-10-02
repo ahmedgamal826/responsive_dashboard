@@ -23,10 +23,13 @@ class RangeOption extends StatelessWidget {
             'Monthly',
             style: AppStyles.Medium16,
           ),
+          const SizedBox(
+            width: 16,
+          ),
           Transform.rotate(
             angle: -1.571,
             child: const Icon(
-              Icons.arrow_back_ios_new_outlined,
+              Icons.arrow_back_ios_new,
             ),
           )
         ],
