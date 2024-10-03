@@ -38,49 +38,77 @@ class _AllExpancesItemListViewState extends State<AllExpancesItemListView> {
   @override
   Widget build(BuildContext context) {
     return Row(
-        // children: items
-        //     .map((e) =>
-        //         Expanded(child: AllExpansesItem(allExpancesItemModel: e)))
-        //     .toList());
-
-        children: items.asMap().entries.map((e) {
-      // as map ==> to get index for children in row
-      int index = e.key;
-      var item = e.value;
-
-      if (index == 1) {
-        // Conainer In the middle
-        return Expanded(
+      children: [
+        Expanded(
           child: InkWell(
             onTap: () {
-              setState(() {
-                selectedIndex = index;
-              });
-            },
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12),
-              child: AllExpansesItem(
-                allExpancesItemModel: item,
-                isSelected: selectedIndex == index,
-              ),
-            ),
-          ),
-        );
-      } else {
-        return Expanded(
-          child: InkWell(
-            onTap: () {
-              setState(() {
-                selectedIndex = index;
-              });
+              updateIndex(0);
             },
             child: AllExpansesItem(
-              allExpancesItemModel: item,
-              isSelected: selectedIndex == index,
+              allExpancesItemModel: items[0],
+              isSelected: selectedIndex == 0,
             ),
           ),
-        );
-      }
-    }).toList());
+        ),
+        const SizedBox(width: 8),
+        Expanded(
+          child: InkWell(
+            onTap: () {
+              updateIndex(1);
+            },
+            child: AllExpansesItem(
+              allExpancesItemModel: items[1],
+              isSelected: selectedIndex == 1,
+            ),
+          ),
+        ),
+        const SizedBox(width: 8),
+        Expanded(
+          child: InkWell(
+            onTap: () {
+              updateIndex(2);
+            },
+            child: AllExpansesItem(
+              allExpancesItemModel: items[2],
+              isSelected: selectedIndex == 2,
+            ),
+          ),
+        ),
+      ],
+    );
+    // return Row(
+    //   // children: items
+    //   //     .map((e) =>
+    //   //         Expanded(child: AllExpansesItem(allExpancesItemModel: e)))
+    //   //     .toList());
+
+    //   children: items.asMap().entries.map((e) {
+    //     // as map ==> to get index for children in row
+    //     int index = e.key;
+    //     var item = e.value;
+
+    //     // Conainer In the middle
+    //     return Expanded(
+    //       child: InkWell(
+    //         onTap: () {
+    //           updateIndex(index);
+    //         },
+    //         child: Padding(
+    //           padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
+    //           child: AllExpansesItem(
+    //             allExpancesItemModel: item,
+    //             isSelected: selectedIndex == index,
+    //           ),
+    //         ),
+    //       ),
+    //     );
+    //   }).toList(),
+    // );
+  }
+
+  void updateIndex(int index) {
+    return setState(() {
+      selectedIndex = index;
+    });
   }
 }

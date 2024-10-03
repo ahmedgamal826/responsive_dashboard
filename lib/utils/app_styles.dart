@@ -111,8 +111,8 @@ double getResponsiveText(
   double lowerLimit = fontSize * 0.8; // 80 %
   double upperLimit = fontSize * 1.2; // 120 %
 
-  print(
-      'Scale Factor = $scaleFactor  lowerLimit = $lowerLimit  upperLimit = $upperLimit responsiveFontSize = $responsiveFontSize');
+  // print(
+  //     'Scale Factor = $scaleFactor  lowerLimit = $lowerLimit  upperLimit = $upperLimit responsiveFontSize = $responsiveFontSize');
 
   return responsiveFontSize.clamp(lowerLimit, upperLimit);
 }
@@ -133,9 +133,9 @@ double getScaleFactor(BuildContext context) {
     return width / 550;
   } else if (width < SizedConfigClass.desktop) {
     // Tablet Layout
-    return width / 1000;
+    return width / 1100;
   } else {
     // Desktop Layout
-    return width / 1500;
+    return width / 1800;
   }
 }

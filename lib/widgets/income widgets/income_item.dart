@@ -31,13 +31,16 @@ class IncomeDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     print(MediaQuery.sizeOf(context).width.toString());
 
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: items
-          .map((e) => IncomeItem(
-                incomeSectiomModel: e,
-              ))
-          .toList(),
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 30),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: items
+            .map((e) => IncomeItem(
+                  incomeSectiomModel: e,
+                ))
+            .toList(),
+      ),
     );
     // return ListView.builder(
     //   shrinkWrap: true,

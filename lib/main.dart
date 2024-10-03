@@ -17,8 +17,8 @@ class ResponsiveDashBoard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // locale: DevicePreview.locale(context),
-      // builder: DevicePreview.appBuilder,
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
       home: DashBoardView(),
     );
