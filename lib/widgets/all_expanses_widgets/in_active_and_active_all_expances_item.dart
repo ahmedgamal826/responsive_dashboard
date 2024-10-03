@@ -33,17 +33,17 @@ class InActiveAllExpancesItem extends StatelessWidget {
           const SizedBox(height: 34),
           Text(
             allExpancesItemModel.title,
-            style: AppStyles.Medium16,
+            style: AppStyles.Medium16(context),
           ),
           const SizedBox(height: 8),
           Text(
             allExpancesItemModel.date,
-            style: AppStyles.Regular14,
+            style: AppStyles.Regular14(context),
           ),
           const SizedBox(height: 16),
           Text(
             allExpancesItemModel.price,
-            style: AppStyles.SemiBold24,
+            style: AppStyles.SemiBold24(context),
           )
         ],
       ),
@@ -80,21 +80,21 @@ class ActiveAllExpancesItem extends StatelessWidget {
           const SizedBox(height: 34),
           Text(
             allExpancesItemModel.title,
-            style: AppStyles.Medium16.copyWith(
+            style: AppStyles.Medium16(context).copyWith(
               color: Colors.white,
             ),
           ),
           const SizedBox(height: 8),
           Text(
             allExpancesItemModel.date,
-            style: AppStyles.Regular14.copyWith(
+            style: AppStyles.Regular14(context).copyWith(
               color: Colors.white,
             ),
           ),
           const SizedBox(height: 16),
           Text(
             allExpancesItemModel.price,
-            style: AppStyles.SemiBold24.copyWith(
+            style: AppStyles.SemiBold24(context).copyWith(
               color: Colors.white,
             ),
           )

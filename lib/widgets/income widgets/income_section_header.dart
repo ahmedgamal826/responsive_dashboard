@@ -14,7 +14,7 @@ class IncomeSectionHeader extends StatelessWidget {
       children: [
         Text(
           'Income',
-          style: AppStyles.SemiBold20.copyWith(
+          style: AppStyles.SemiBold20(context).copyWith(
             color: const Color(0xFF064061),
           ),
         ),

@@ -27,7 +27,7 @@ class CusomButton extends StatelessWidget {
         onPressed: () {},
         child: Text(
           text,
-          style: AppStyles.SemiBold18.copyWith(
+          style: AppStyles.SemiBold18(context).copyWith(
             color: textColor,
           ),
         ),

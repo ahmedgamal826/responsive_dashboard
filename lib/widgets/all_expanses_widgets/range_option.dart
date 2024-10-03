@@ -21,7 +21,7 @@ class RangeOption extends StatelessWidget {
         children: [
           Text(
             'Monthly',
-            style: AppStyles.Medium16,
+            style: AppStyles.Medium16(context),
           ),
           const SizedBox(
             width: 16,

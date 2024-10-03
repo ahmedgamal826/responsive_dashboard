@@ -38,7 +38,7 @@ class _IncomeChartState extends State<DetailedIcomeChart> {
           radius: activeIndex == 0 ? 60 : 50,
           value: 40,
           title: activeIndex == 0 ? 'Design service' : '40%',
-          titleStyle: AppStyles.Medium16.copyWith(
+          titleStyle: AppStyles.Medium16(context).copyWith(
             color: activeIndex == 0 ? Colors.black : Colors.white,
           ),
           color: const Color(0xFF208CC8),
@@ -48,7 +48,7 @@ class _IncomeChartState extends State<DetailedIcomeChart> {
           radius: activeIndex == 1 ? 60 : 50,
           value: 25,
           title: activeIndex == 1 ? 'Design product' : '25%',
-          titleStyle: AppStyles.Medium16.copyWith(
+          titleStyle: AppStyles.Medium16(context).copyWith(
             color: activeIndex == 1 ? Colors.black : Colors.white,
           ),
           color: const Color(0xFF4EB7F2),
@@ -57,7 +57,7 @@ class _IncomeChartState extends State<DetailedIcomeChart> {
           titlePositionPercentageOffset: activeIndex == 2 ? 1.3 : null,
           radius: activeIndex == 2 ? 60 : 50,
           title: activeIndex == 2 ? 'Product royalti' : '20%',
-          titleStyle: AppStyles.Medium16.copyWith(
+          titleStyle: AppStyles.Medium16(context).copyWith(
             color: activeIndex == 2 ? Colors.black : Colors.white,
           ),
           value: 20,
@@ -68,7 +68,7 @@ class _IncomeChartState extends State<DetailedIcomeChart> {
           radius: activeIndex == 3 ? 60 : 50,
           value: 22,
           title: activeIndex == 3 ? 'Other' : '22%',
-          titleStyle: AppStyles.Medium16.copyWith(
+          titleStyle: AppStyles.Medium16(context).copyWith(
             color: activeIndex == 3 ? Colors.black : Colors.white,
           ),
           color: const Color(0xFFE2DECD),
