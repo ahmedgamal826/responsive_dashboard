@@ -10,25 +10,40 @@ class IncomeSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomBackgroundContainer(
-      child: Column(
+      child: const Column(
         children: [
-          const IncomeSectionHeader(),
-          const SizedBox(
+          IncomeSectionHeader(),
+          SizedBox(
             height: 16,
           ),
-          Row(
+          IncomeSectionBody()
+        ],
+      ),
+    );
+  }
+}
+
+class IncomeSectionBody extends StatelessWidget {
+  const IncomeSectionBody({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    return width >= 1100 && width < 1525
+        ? const SizedBox() /////////////////
+        : Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const Expanded(
                 child: IncomeChart(),
               ),
               Expanded(
-                child: IncomeItems(),
+                flex: 2,
+                child: IncomeDetails(),
               )
             ],
-          )
-        ],
-      ),
-    );
+          );
   }
 }

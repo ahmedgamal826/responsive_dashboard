@@ -1,9 +1,11 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/models/income_details_model.dart';
 import 'package:responsive_dash_board/widgets/income%20widgets/income_item_details.dart';
 
-class IncomeItems extends StatelessWidget {
-  IncomeItems({super.key});
+class IncomeDetails extends StatelessWidget {
+  IncomeDetails({super.key});
 
   List<IncomeDetailsModel> items = [
     IncomeDetailsModel(
@@ -27,15 +29,25 @@ class IncomeItems extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      itemCount: items.length,
-      itemBuilder: (context, index) {
-        return IncomeItemDetails(
-          incomeSectiomModel: items[index],
-        );
-      },
+    print(MediaQuery.sizeOf(context).width.toString());
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: items
+          .map((e) => IncomeItem(
+                incomeSectiomModel: e,
+              ))
+          .toList(),
     );
+    // return ListView.builder(
+    //   shrinkWrap: true,
+    //   physics: const NeverScrollableScrollPhysics(),
+    //   itemCount: items.length,
+    //   itemBuilder: (context, index) {
+    //     return IncomeItemDetails(
+    //       incomeSectiomModel: items[index],
+    //     );
+    //   },
+    // );
   }
 }
