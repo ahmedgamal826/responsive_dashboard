@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/utils/app_styles.dart';
 import 'package:responsive_dash_board/widgets/adaptive_layout_widget.dart';
 import 'package:responsive_dash_board/widgets/custom_drawer_widgets/custom_drawer.dart';
 import 'package:responsive_dash_board/widgets/dashboard_desktop_layout.dart';
@@ -26,6 +27,14 @@ class DashBoardView extends StatelessWidget {
                   Icons.menu,
                 ),
               ),
+              title: Text(
+                'Dashboard Screen',
+                style: AppStyles.Bold16(context).copyWith(
+                  fontSize: 20,
+                  color: Colors.white,
+                ),
+              ),
+              centerTitle: true,
             )
           : null,
       backgroundColor: const Color(0xFFF5F5F5),
