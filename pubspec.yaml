@@ -48,7 +48,10 @@ dev_dependencies:
 flutter_launcher_icons:
   android: true
   ios: true
-  image_path: "assets/images/data-transfer.png"
+  remove_alpha_ios: true
+  image_path: "assets/images/responsive-design.png"
+  adaptive_icon_background: "#ffffff" # You can use a color or image for the background
+  adaptive_icon_foreground: "assets/images/responsive-design.png" # For adaptive icons on Android
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
